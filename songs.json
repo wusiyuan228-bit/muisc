@@ -1,0 +1,237 @@
+[
+  {
+    "id": "demo",
+    "title": "昨夜风今宵月",
+    "artist": "私藏音乐馆",
+    "duration": 122.38,
+    "audio": "./media/demo.mp3",
+    "cover": "./cover.svg",
+    "lineCount": 32,
+    "lyrics": [
+      {
+        "id": "line-0",
+        "time": 0,
+        "text": "为你写",
+        "reading": "wèi nǐ xiě",
+        "translation": "Viết cho em"
+      },
+      {
+        "id": "line-1",
+        "time": 1.8399999999999999,
+        "text": "几页诗篇几行誓言",
+        "reading": "jǐ yè shī piān jǐ háng shì yán",
+        "translation": "Vài trang thơ, vài dòng lời hẹn ước"
+      },
+      {
+        "id": "line-2",
+        "time": 4.55,
+        "text": "几个长夜几次想念",
+        "reading": "jǐ gè cháng yè jǐ cì xiǎng niàn",
+        "translation": "Mấy đêm dài, bao lần nhớ em"
+      },
+      {
+        "id": "line-3",
+        "time": 7.5,
+        "text": "你的转身让我又失眠",
+        "reading": "nǐ de zhuǎn shēn ràng wǒ yòu shī mián",
+        "translation": "Em quay đi, anh lại mất ngủ"
+      },
+      {
+        "id": "line-4",
+        "time": 12.84,
+        "text": "想要牵住你的左手却红了脸",
+        "reading": "xiǎng yào qiān zhù nǐ de zuǒ shǒu què hóng le liǎn",
+        "translation": "Muốn nắm lấy tay trái em mà lại đỏ mặt"
+      },
+      {
+        "id": "line-5",
+        "time": 18.16,
+        "text": "想要搂紧你的左肩却又胆怯",
+        "reading": "xiǎng yào lǒu jǐn nǐ de zuǒ jiān què yòu dǎn qiè",
+        "translation": "Muốn ôm chặt bờ vai trái em mà lại rụt rè"
+      },
+      {
+        "id": "line-6",
+        "time": 22.52,
+        "text": "陪你走到飞花的街 如何能把故事续写",
+        "reading": "péi nǐ zǒu dào fēi huā de jiē rú hé néng bǎ gù shì xù xiě",
+        "translation": "Cùng em qua con phố hoa bay, làm sao viết tiếp chuyện đôi mình?"
+      },
+      {
+        "id": "line-7",
+        "time": 28.81,
+        "text": "原谅我太笨风情不解",
+        "reading": "yuán liàng wǒ tài bèn fēng qíng bù jiě",
+        "translation": "Tha lỗi vì anh vụng về, chẳng hiểu chuyện tình yêu"
+      },
+      {
+        "id": "line-8",
+        "time": 33.9,
+        "text": "我不爱 无聊人间",
+        "reading": "wǒ bú ài wú liáo rén jiān",
+        "translation": "Anh chẳng yêu thế gian nhạt nhẽo này"
+      },
+      {
+        "id": "line-9",
+        "time": 39.18,
+        "text": "只偏爱 你眉眼",
+        "reading": "zhī piān ài nǐ méi yǎn",
+        "translation": "Chỉ riêng đôi mắt, nét mày em khiến anh say lòng"
+      },
+      {
+        "id": "line-10",
+        "time": 44.45,
+        "text": "如果你 也有时间",
+        "reading": "rú guǒ nǐ yě yǒu shí jiān",
+        "translation": "Nếu em cũng có chút thời gian"
+      },
+      {
+        "id": "line-11",
+        "time": 49.87,
+        "text": "陪我把这风景 看 遍",
+        "reading": "péi wǒ bǎ zhè fēng jǐng kàn biàn",
+        "translation": "Cùng anh ngắm trọn những cảnh đẹp này"
+      },
+      {
+        "id": "line-12",
+        "time": 54.19,
+        "text": "为你写",
+        "reading": "wèi nǐ xiě",
+        "translation": "Viết cho em"
+      },
+      {
+        "id": "line-13",
+        "time": 55.16,
+        "text": "几页诗篇几行誓言",
+        "reading": "jǐ yè shī piān jǐ háng shì yán",
+        "translation": "Vài trang thơ, vài dòng lời hẹn ước"
+      },
+      {
+        "id": "line-14",
+        "time": 57.85,
+        "text": "几个长夜几次想念",
+        "reading": "jǐ gè cháng yè jǐ cì xiǎng niàn",
+        "translation": "Mấy đêm dài, bao lần nhớ em"
+      },
+      {
+        "id": "line-15",
+        "time": 60.84,
+        "text": "你的转身让我又失眠",
+        "reading": "nǐ de zhuǎn shēn ràng wǒ yòu shī mián",
+        "translation": "Em quay đi, anh lại mất ngủ"
+      },
+      {
+        "id": "line-16",
+        "time": 64.92,
+        "text": "为你写",
+        "reading": "wèi nǐ xiě",
+        "translation": "Viết cho em"
+      },
+      {
+        "id": "line-17",
+        "time": 65.83,
+        "text": "昨夜的风今宵的月",
+        "reading": "zuó yè de fēng jīn xiāo de yuè",
+        "translation": "Gió đêm qua, trăng đêm nay"
+      },
+      {
+        "id": "line-18",
+        "time": 68.52,
+        "text": "前世的恋今生的签",
+        "reading": "qián shì de liàn jīn shēng de qiān",
+        "translation": "Tình kiếp trước, quẻ duyên kiếp này"
+      },
+      {
+        "id": "line-19",
+        "time": 71.56,
+        "text": "和你白头的那一场雪",
+        "reading": "hé nǐ bái tóu de nà yì chǎng xuě",
+        "translation": "Trận tuyết ấy phủ trắng mái đầu của đôi ta"
+      },
+      {
+        "id": "line-20",
+        "time": 76.53,
+        "text": "我 不爱 无聊人间",
+        "reading": "wǒ bú ài wú liáo rén jiān",
+        "translation": "Anh chẳng yêu thế gian nhạt nhẽo này"
+      },
+      {
+        "id": "line-21",
+        "time": 81.86,
+        "text": "只偏爱 你眉眼",
+        "reading": "zhī piān ài nǐ méi yǎn",
+        "translation": "Chỉ riêng đôi mắt, nét mày em khiến anh say lòng"
+      },
+      {
+        "id": "line-22",
+        "time": 87.15,
+        "text": "如果你 也有时间",
+        "reading": "rú guǒ nǐ yě yǒu shí jiān",
+        "translation": "Nếu em cũng có chút thời gian"
+      },
+      {
+        "id": "line-23",
+        "time": 92.59,
+        "text": "陪我把这风景 看遍",
+        "reading": "péi wǒ bǎ zhè fēng jǐng kàn biàn",
+        "translation": "Cùng anh ngắm trọn những cảnh đẹp này"
+      },
+      {
+        "id": "line-24",
+        "time": 96.87,
+        "text": "为你写",
+        "reading": "wèi nǐ xiě",
+        "translation": "Viết cho em"
+      },
+      {
+        "id": "line-25",
+        "time": 97.86,
+        "text": "几页诗篇几行誓言",
+        "reading": "jǐ yè shī piān jǐ háng shì yán",
+        "translation": "Vài trang thơ, vài dòng lời hẹn ước"
+      },
+      {
+        "id": "line-26",
+        "time": 100.53,
+        "text": "几个长夜几次想念",
+        "reading": "jǐ gè cháng yè jǐ cì xiǎng niàn",
+        "translation": "Mấy đêm dài, bao lần nhớ em"
+      },
+      {
+        "id": "line-27",
+        "time": 103.54,
+        "text": "你的转身让我又失眠",
+        "reading": "nǐ de zhuǎn shēn ràng wǒ yòu shī mián",
+        "translation": "Em quay đi, anh lại mất ngủ"
+      },
+      {
+        "id": "line-28",
+        "time": 107.58,
+        "text": "为你写",
+        "reading": "wèi nǐ xiě",
+        "translation": "Viết cho em"
+      },
+      {
+        "id": "line-29",
+        "time": 108.51,
+        "text": "昨夜的风今宵的月",
+        "reading": "zuó yè de fēng jīn xiāo de yuè",
+        "translation": "Gió đêm qua, trăng đêm nay"
+      },
+      {
+        "id": "line-30",
+        "time": 111.21,
+        "text": "前世的恋今生的签",
+        "reading": "qián shì de liàn jīn shēng de qiān",
+        "translation": "Tình kiếp trước, quẻ duyên kiếp này"
+      },
+      {
+        "id": "line-31",
+        "time": 114.13,
+        "text": "和你白头的那一场雪",
+        "reading": "hé nǐ bái tóu de nà yì chǎng xuě",
+        "translation": "Trận tuyết ấy phủ trắng mái đầu của đôi ta"
+      }
+    ]
+  }
+]

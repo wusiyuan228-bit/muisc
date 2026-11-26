@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta name="ting-mode" content="static">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7f2">
+  <meta name="description" content="Học tiếng Trung qua bài hát, với lời ca và phiên âm đồng bộ.">
+  <title>听见 TING — Học tiếng Trung qua bài hát</title>
+  <link rel="icon" href="./cover.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body class="focus-layout">
+  <a class="skip-link" href="#lyrics-scroll">Đến lời bài hát</a>
+  <header class="song-header">
+    <div class="song-heading"><h1 id="song-title" lang="zh-CN">昨夜风今宵月</h1><p id="song-artist" lang="zh-CN">私藏音乐馆</p></div>
+    <button id="library-button" class="header-action" aria-haspopup="dialog"><i data-icon="library"></i><span>Bài hát</span></button>
+    <button id="share-button" class="icon-button" aria-label="Chia sẻ bài hát" title="Chia sẻ bài hát"><i data-icon="share"></i></button>
+  </header>
+
+  <main class="main-content">
+    <div id="page-error" class="page-error" role="alert" hidden></div>
+    <section class="lyrics-panel" id="lyrics-panel" aria-label="Lời bài hát">
+      <div class="lyrics-toolbar">
+        <div class="segmented"><button id="pinyin-toggle" class="active" aria-pressed="true">Phiên âm</button><button id="meaning-toggle" aria-pressed="false">Nghĩa Việt</button></div>
+        <button id="follow-button" class="follow-button active" aria-pressed="true" title="Tự cuộn theo lời bài hát"><i data-icon="follow"></i><span>Tự cuộn</span></button>
+      </div>
+      <div class="lyrics-scroll" id="lyrics-scroll" tabindex="0" aria-label="Lời bài hát đồng bộ. Chạm vào một câu để nghe."><div id="lyrics-lines" class="lyrics-lines"><div class="empty-state">Đang tải lời bài hát…</div></div></div>
+      <div class="lyrics-bottom"><span id="lyric-hint">Chạm vào một câu để nghe</span><span id="repeat-badge" class="repeat-badge" hidden>Lặp một câu</span><button id="recenter-button" hidden>Về câu đang hát ↓</button><span id="line-position" class="line-position" aria-label="Vị trí câu hát">01 / 32</span></div>
+    </section>
+  </main>
+
+  <footer class="player-bar" aria-label="Trình phát nhạc">
+    <div class="timeline"><span id="current-time">0:00</span><input id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Vị trí phát" disabled><span id="duration">2:02</span></div>
+    <div class="transport-buttons">
+      <button id="loop-button" class="icon-button loop-button" title="Lặp câu đang hát" aria-label="Lặp câu đang hát" aria-pressed="false"><i data-icon="repeat"></i><span>Lặp câu</span></button>
+      <button id="prev-line" class="icon-button" title="Câu trước" aria-label="Câu trước"><i data-icon="previous"></i></button>
+      <button id="play-button" class="main-play" aria-label="Phát nhạc"><i data-icon="play"></i></button>
+      <button id="next-line" class="icon-button" title="Câu tiếp theo" aria-label="Câu tiếp theo"><i data-icon="next"></i></button>
+      <label class="speed-control"><select id="speed" aria-label="Tốc độ phát"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1" selected>1.0×</option><option value="1.25">1.25×</option></select><span>Tốc độ</span></label>
+    </div>
+    <div class="desktop-volume"><button id="mute-button" class="icon-button" aria-label="Tắt tiếng" aria-pressed="false"><i data-icon="volume"></i></button><input id="volume" type="range" min="0" max="1" value="0.8" step="0.01" aria-label="Âm lượng"></div>
+  </footer>
+
+  <dialog id="library-dialog" class="modal library-modal" aria-labelledby="library-title"><div class="modal-heading"><h2 id="library-title">Bài hát <span id="song-count" class="count">0</span></h2><button class="icon-button" data-close="library-dialog" aria-label="Đóng"><i data-icon="close"></i></button></div>
+    <label class="search-box"><i data-icon="search"></i><input id="search" type="search" placeholder="Tìm bài hát…" aria-label="Tìm bài hát"></label>
+    <div id="song-list" class="song-list" aria-label="Danh sách bài hát"><p class="muted small">Đang tải bài hát…</p></div>
+    <div class="library-actions"><button id="restart-button" class="text-button"><i data-icon="restart"></i>Nghe từ đầu</button><button id="favorite-button" class="icon-button favorite-button" aria-label="Yêu thích bài hát" aria-pressed="false"><i data-icon="heart"></i></button></div>
+    <div class="library-actions"><button id="help-button" class="text-button">Cách sử dụng</button><button id="manage-button" hidden class="text-button"><i data-icon="sliders"></i>Quản lý</button></div>
+  </dialog>
+  <audio id="audio" preload="metadata"></audio>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="help-dialog" class="modal help-modal" aria-labelledby="help-title"><div class="modal-heading"><h2 id="help-title">Cách sử dụng</h2><button class="icon-button" data-close="help-dialog" aria-label="Đóng"><i data-icon="close"></i></button></div><ol class="how-list"><li><span>01</span><div><h3>Đọc cùng phiên âm</h3><p>Phiên âm nằm trên từng chữ Hán. Bạn có thể ẩn phiên âm để tự luyện đọc.</p></div></li><li><span>02</span><div><h3>Nghe từng câu</h3><p>Chạm vào một câu để nghe từ đó. Bật «Lặp câu» để nghe và hát lại nhiều lần.</p></div></li><li><span>03</span><div><h3>Chậm lại một chút</h3><p>Chọn tốc độ 0.75×. Giọng hát giữ nguyên cao độ nếu trình duyệt hỗ trợ.</p></div></li></ol><p class="small muted">Phiên âm tự động có thể sai ở chữ đa âm hoặc biến điệu; người quản lý có thể sửa từng câu. Nghĩa Việt chỉ hỗ trợ học tập, không phải bản dịch chính thức.</p><p class="small muted">Chỉ chia sẻ nhạc và lời bài hát khi bạn có quyền. Đây là trang nghe nhạc công khai. Việc quản lý và tải nhạc lên được thực hiện riêng bởi chủ trang.</p></dialog>
+
+  <dialog id="share-dialog" class="modal share-modal" aria-labelledby="share-title"><div class="modal-heading"><h2 id="share-title">Chia sẻ bài hát</h2><button class="icon-button" data-close="share-dialog" aria-label="Đóng"><i data-icon="close"></i></button></div><p id="share-note" class="muted"></p><label class="field">Liên kết bài hát<input id="share-link" readonly></label><button id="copy-link" class="primary-button"><i data-icon="copy"></i>Sao chép liên kết</button><p class="small muted">Hãy kiểm tra quyền chia sẻ nhạc. Liên kết không chứa mật khẩu quản lý.</p></dialog>
+
+  <dialog id="admin-dialog" hidden class="modal admin-modal" lang="zh-CN"><div class="modal-heading"><div><h2>管理歌曲</h2></div><button class="icon-button" data-close="admin-dialog" aria-label="关闭管理页"><i data-icon="close"></i></button></div>
+    <div id="admin-login"><p class="muted">上传你的音乐，为每一句加上拼音。</p><form id="login-form"><label class="field">管理密码<input id="admin-password" type="password" required minlength="8" maxlength="256" autocomplete="current-password" placeholder="输入管理密码"></label><button class="primary-button" type="submit">登录管理后台<i data-icon="arrow"></i></button></form><p class="small muted">本机首次启动会生成随机密码，保存在项目目录的 <code>.local/admin-password.txt</code>。部署时请设置 <code>ADMIN_PASSWORD</code> 环境变量。</p></div>
+    <div id="admin-content" hidden><div class="admin-session"><span><span class="live-dot"></span>管理会话已登录</span><button id="logout-button" class="text-button">退出登录</button></div><div class="admin-tabs"><button id="upload-tab" class="active">上传歌曲</button><button id="edit-tab">歌曲与拼音校正</button></div>
+      <section id="upload-pane"><p class="muted small">MP3 与带时间标签的 LRC 配对上传，拼音会自动生成。文件保存到服务端，朋友无需再次导入。</p><form id="upload-form"><div class="form-grid"><label class="field">歌曲名称<input id="upload-title" name="title" required maxlength="100" placeholder="例如：昨夜风今宵月"></label><label class="field">歌手 / 来源<input name="artist" maxlength="100" placeholder="例如：私藏音乐馆"></label></div><div class="form-grid"><label class="file-field"><i data-icon="music"></i><strong>选择 MP3 音乐</strong><span>最大 30 MB</span><input id="upload-audio" name="audio" type="file" accept=".mp3,audio/mpeg" required></label><label class="file-field"><i data-icon="lyrics"></i><strong>选择 LRC 歌词</strong><span>最大 1 MB · UTF-8 / GBK</span><input name="lyrics" type="file" accept=".lrc" required></label></div><label class="consent"><input type="checkbox" required>我确认有权上传和分享这些音频及歌词。</label><button class="primary-button" type="submit"><i data-icon="upload"></i>上传并生成拼音</button></form></section>
+      <section id="edit-pane" hidden><div id="admin-song-list"></div><form id="lyric-edit-form" hidden><div class="editor-heading"><button id="editor-back" class="text-button" type="button">← 返回歌曲</button><strong id="editor-title"></strong></div><p class="small muted">每个汉字对应一个拼音，拼音间用空格分隔；标点、空格、英文无需拼音。可直接粘贴带声调拼音，例如：wèi nǐ xiě。越南语释义选填。</p><div id="editor-lines" class="editor-lines"></div><button class="primary-button" type="submit">保存拼音与释义</button></form></section>
+    </div><p id="admin-message" class="form-message" role="status"></p>
+  </dialog>
+</body>
+</html>

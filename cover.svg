@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e8a07c"/><stop offset="1" stop-color="#f2d5ae"/></linearGradient>
+    <linearGradient id="hill" x2="1" y2="1"><stop stop-color="#477064"/><stop offset="1" stop-color="#233e39"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+  </defs>
+  <g filter="url(#grain)">
+    <path fill="url(#sky)" d="M0 0h700v700H0z"/>
+    <circle cx="477" cy="230" r="93" fill="#fff1cd"/>
+    <path d="M0 470Q110 332 260 405T700 357V700H0Z" fill="#a3a992"/>
+    <path d="M0 488Q202 391 374 478T700 424V700H0Z" fill="#6e8e79"/>
+    <path d="M0 578Q190 423 402 560T700 480V700H0Z" fill="url(#hill)"/>
+    <path d="M358 700Q471 570 392 526Q316 487 339 460" fill="none" stroke="#dfcda7" stroke-width="12" opacity=".75"/>
+    <path d="M0 632Q169 530 272 581L197 700H0Z" fill="#25433a"/>
+  </g>
+  <g fill="#fff7e8" font-family="'Microsoft YaHei',sans-serif">
+    <text x="61" y="105" font-size="17" letter-spacing="5">A SONG, A LITTLE CLOSER.</text>
+    <text x="56" y="212" font-size="66" font-weight="300" letter-spacing="8">昨夜风</text>
+    <text x="56" y="296" font-size="66" font-weight="300" letter-spacing="8">今宵月</text>
+    <text x="61" y="638" font-size="16" letter-spacing="4">TING · CHINESE THROUGH MUSIC</text>
+  </g>
+</svg>
